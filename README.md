@@ -137,3 +137,51 @@ Right next to the ${name} expression, add a new embedded expression. Inside that
 
 Step 30
 Below the h2 element, add a paragraph element with the text Position: and an embedded expression that contains the position parameter.
+
+Step 31
+Below the paragraph element, add another paragraph element with the text Number: and an embedded expression that contains the number parameter.
+
+Step 32
+Below your existing paragraph elements, add another paragraph element with the text Nickname: .
+
+Step 33
+Next to the Nickname: text, add an embedded expression that will show the player's nickname if they have one.
+Use a ternary operator to check if nickname is not null. If the player has a nickname, display nickname otherwise display "N/A".
+
+Step 34
+The .map() method will return a new array of player-card items separated by commas.
+To remove the commas between each player-card so it does not show up on screen, chain the .join() method to the .map() method. Pass an empty string as the argument for the .join() method.
+
+Step 35
+The next step is to create a function that will detect when a user makes a selection from the playersDropdownList.
+Use the .addEventListener() method on playersDropdownList. Inside the event listener, pass in a "change" event type and an empty callback function.
+
+Step 36
+For the callback function, pass in e as a parameter.
+e represents an object which contains the information for that event.
+
+Step 37
+Inside the callback function, add a console.log with the value of e.target.value.
+Open the console, and make a selection from the teammates dropdown menu. You should see the value of that selection in the console.
+e.target.value represents the value property from the playersDropdownList element. In future steps, you will use this value to show player cards based on the position they play.
+
+Step 38
+Remove the console.log statement you created in the previous step.
+
+The next step would be to reset the content for the playerCards element.
+
+Inside the callback function, access the innerHTML property of the playerCards element and assign it a value of an empty string.
+
+Step 42
+Before you can move onto the next case, you will need to add a break statement.
+
+Below your setPlayerCards call, add a break statement.
+
+Step 47
+The final step is to add a default clause if none of the other case clauses match the user selection.
+
+For the default clause, call the setPlayerCards function without any arguments passed in.
+
+Test out your dropdown menu, and you should see the player cards be filtered out by position or nickname.
+
+Congratulations on completing the football team cards project!
